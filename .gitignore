@@ -9,3 +9,4 @@
 /.idea/
 *.iml
 *.class
+/target/classes/spring-beans.xml
