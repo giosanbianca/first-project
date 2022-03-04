@@ -13,7 +13,9 @@ public class Main {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Cart cart = context.getBean(CartServiceImpl.class);
+        CartService cartService = context.getBean("cartServiceBean", CartServiceImpl.class);
+        cartService.add("123");
+        Cart cart = cartService.get();
         System.out.println(cart.getProducts().get(0).getId());
     }
 }
