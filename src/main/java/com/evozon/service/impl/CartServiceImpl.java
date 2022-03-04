@@ -9,9 +9,9 @@ import com.evozon.service.ProductService;
 
 public class CartServiceImpl implements CartService {
 
-    private CartRepository cartRepository;
+    private CartRepository cartRepository = new CartRepositoryImpl();
 
-    private ProductService productService;
+    private ProductService productService = new ProductServiceImpl();
 
     public Cart get() {
         return cartRepository.get();
