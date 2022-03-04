@@ -13,6 +13,11 @@ public class CartServiceImpl implements CartService {
 
     private ProductService productService;
 
+    public CartServiceImpl(CartRepository cartRepository, ProductService productService) {
+        this.cartRepository = cartRepository;
+        this.productService = productService;
+    }
+
     public Cart get() {
         return cartRepository.get();
     }
